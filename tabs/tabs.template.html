@@ -1,0 +1,21 @@
+﻿<div class="tabLane">
+    <div class="tabPager">
+        <div class="tabPagerButtonLeft glyphicon glyphicon-chevron-left {{tabControl.isLeftScrollable}}" ng-click="tabControl.pageLeft()"></div>
+        <div class="tabPagerButtonRight glyphicon glyphicon-chevron-right {{tabControl.isRightScrollable}}" ng-click="tabControl.pageRight()"></div>
+        <div class="tabPagerButtonPlus glyphicon glyphicon-plus" ng-click="tabControl.openTab()"></div>
+        <div ng-repeat="tab in tabs">
+            <div class="tabHeading {{tab.classes}}" ng-if="$index >= tabControl.startIndex" ng-click="tabControl.setActive($index)">
+                <label>{{tab.title}}</label>
+                <div class="tabRemoveButton glyphicon glyphicon-remove" ng-if="tab.type != 'home'" ng-click="tabControl.closeTab($index)"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tabLaneSpacer"></div>
+<div ng-repeat="tab in tabs">
+    <div ng-show="tab.active" class="tabContent">
+        <div class="jqx-widget">
+            <div ng-if="tab.type == 'home'"><home></home></div>
+        </div>
+    </div>
+</div>

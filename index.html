@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html ng-app="nevsuite">
+	
+	<head>
+		
+		<!-- Application-Info -->
+		<title>NevSuite</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+		<!-- Remote Base-APIs -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		
+		<!-- Bootstrap -->
+		<script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+		
+		<!-- StyleSheets -->
+		<link rel="stylesheet" type="text/css" href="nevsuite.css" />
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css"/>
+		
+		<!-- NevSuite-Modules -->
+		<script type="text/javascript" src="nevsuite.module.js"></script>
+		
+		<!-- Component-Modules -->
+        <script type="text/javascript" src="tabs/tabs.module.js"></script>
+        <script type="text/javascript" src="tabs/tabs.component.js"></script>
+        <script type="text/javascript" src="home/home.module.js"></script>
+        <script type="text/javascript" src="home/home.component.js"></script>
+        
+		<!-- Disable Browser-ContextMenu -->
+		<script type="text/javascript">
+			$(document).bind('contextmenu', function (e) {
+				return false;
+			});
+		</script>
+		
+	</head>
+	
+	<body>
+		<div>
+			<tabs></tabs>
+		</div>
+	</body>
+	
+</html>
